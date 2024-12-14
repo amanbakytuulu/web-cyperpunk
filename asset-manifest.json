@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/web-cyperpunk/static/css/main.3a37167a.css",
+    "main.js": "/web-cyperpunk/static/js/main.e7306e79.js",
+    "index.html": "/web-cyperpunk/index.html",
+    "main.3a37167a.css.map": "/web-cyperpunk/static/css/main.3a37167a.css.map",
+    "main.e7306e79.js.map": "/web-cyperpunk/static/js/main.e7306e79.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3a37167a.css",
+    "static/js/main.e7306e79.js"
+  ]
+}
