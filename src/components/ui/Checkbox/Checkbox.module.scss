@@ -1,0 +1,54 @@
+.checkbox {
+  display: flex;
+  gap: 1rem;
+  cursor: pointer;
+  user-select: none;
+  width: fit-content;
+  color: var(--white);
+
+  &__container {
+    position: relative;
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+
+  &__input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  &__mark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1.4rem;
+    height: 1.4rem;
+    background-color: transparent;
+    border: 2px solid var(--gray);
+    transition: all 0.2s ease;
+  }
+
+  &__input:checked ~ &__mark > &__icon {
+    opacity: 1;
+  }
+
+  &__icon {
+    width: 100%;
+    height: 100%;
+    color: var(--yellow);
+    opacity: 0;
+  }
+
+  &__label {
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 1.5;
+  }
+
+  &__error {
+    margin-top: 0.5rem;
+    color: rgb(189, 36, 36);
+    font-size: 1.2rem;
+  }
+}

@@ -1,0 +1,44 @@
+@import '../../../styles/mixins.scss';
+
+.picker {
+  width: 100%;
+  border: 1px dashed var(--gray);
+  color: var(--white);
+  text-align: center;
+  cursor: pointer;
+
+  &__file {
+    display: none;
+  }
+
+  &__container {
+    padding: 3.9rem;
+  }
+
+  &:hover &__text {
+    text-decoration: underline;
+  }
+
+  &__text {
+    font-size: 1.8rem;
+    font-weight: 300;
+
+    @include responsive(phone) {
+      font-size: 1.6rem;
+      text-decoration: underline;
+    }
+  }
+
+  &__accepts {
+    margin-top: 0.4rem;
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: rgba($color: #fff, $alpha: 0.8);
+  }
+
+  &__error {
+    margin-top: 1rem;
+    color: rgb(189, 36, 36);
+    font-size: 1.2rem;
+  }
+}

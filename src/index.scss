@@ -1,0 +1,73 @@
+@import './styles/mixins.scss';
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --yellow: #f8f200;
+  --black: #000;
+  --white: #fff;
+  --gray: gray;
+  --sky: #52bedc;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--black);
+}
+
+html {
+  font-size: 10px; /* Теперь 1rem = 10px */
+}
+
+body {
+  margin: 0;
+  background: var(--white);
+  color: var(--black);
+  overflow-x: hidden;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0px 40px;
+
+  @include responsive(laptop) {
+    padding: 0px 20px;
+  }
+
+  @include responsive(phone) {
+    padding: 0px 12px;
+  }
+}
+
+.title {
+  margin-bottom: 2.5rem;
+  font-size: 5.8rem;
+  line-height: 6.5rem;
+
+  @include responsive(laptop) {
+    font-size: 5rem;
+    line-height: 5.5rem;
+  }
+
+  @include responsive(phone) {
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
+}
+
+.clipPath {
+  clip-path: polygon(10% 0, 100% 0, 100% 83%, 90% 100%, 0 100%, 0 17%);
+}

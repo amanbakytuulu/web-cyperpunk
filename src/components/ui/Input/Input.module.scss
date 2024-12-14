@@ -1,0 +1,27 @@
+@import '../../../styles/mixins.scss';
+
+.input {
+  width: 100%;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid var(--gray);
+  font-size: 1.8rem;
+  font-weight: 300;
+  padding: 1rem 0;
+  color: var(--white);
+
+  @include responsive(phone) {
+    font-size: 1.6rem;
+  }
+
+  &::placeholder {
+    color: rgba($color: #fff, $alpha: 0.9);
+  }
+}
+
+.error {
+  margin-top: 0.5rem;
+  color: rgb(189, 36, 36);
+  font-size: 1.4rem;
+}

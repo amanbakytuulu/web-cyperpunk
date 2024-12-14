@@ -1,0 +1,87 @@
+@import '../../styles/mixins.scss';
+
+.games {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: var(--black);
+
+  @include responsive(tablet) {
+    flex-direction: column;
+  }
+
+  &__imgBlock {
+    flex: 1;
+    align-self: normal;
+
+    & > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    flex: 1;
+    padding: 7rem 0;
+    padding-left: 3.2rem;
+    padding-right: 4rem;
+
+    @include responsive(laptop) {
+      padding-right: 2rem;
+    }
+
+    @include responsive(tablet) {
+      padding: 4rem 2rem 7rem;
+    }
+
+    @include responsive(phone) {
+      padding: 4rem 1.2rem 7rem;
+    }
+  }
+
+  & .list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    color: var(--white);
+    margin-bottom: 7rem;
+
+    &__item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
+      & > img {
+        width: 3.2rem;
+        height: 3.2rem;
+      }
+
+      & > p {
+        font-size: 1.8rem;
+        font-weight: 300;
+
+        @include responsive(phone) {
+          font-size: 1.6rem;
+        }
+      }
+    }
+  }
+
+  & .title {
+    max-width: 62rem;
+    color: var(--white);
+  }
+
+  & .subTitle {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--sky);
+    margin-bottom: 1.5rem;
+
+    @include responsive(phone) {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+  }
+}

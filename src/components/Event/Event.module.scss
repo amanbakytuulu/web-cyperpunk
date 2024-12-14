@@ -1,0 +1,95 @@
+@import '../../styles/mixins.scss';
+
+.dots {
+  margin-bottom: -3px;
+  width: 100%;
+}
+
+.event {
+  background: var(--black);
+  padding: 7rem 0;
+
+  &__header {
+    display: flex;
+    column-gap: 3.2rem;
+
+    @include responsive(laptop) {
+      flex-direction: column;
+    }
+  }
+
+  &__img {
+    width: 13.2rem;
+    height: 13.2rem;
+    translate: 0px -5.5rem;
+    user-select: none;
+    -webkit-user-select: none;
+    transition: all 0.15s ease;
+
+    &:hover,
+    &:active {
+      transform: rotate(45deg);
+    }
+
+    @include responsive(phone) {
+      width: 6.2rem;
+      height: 6.2rem;
+    }
+  }
+
+  &__console {
+    translate: 0px -5.5rem;
+    display: none;
+
+    @include responsive(laptop) {
+      display: block;
+    }
+  }
+
+  &__title {
+    color: var(--white);
+  }
+
+  &__desc {
+    font-size: 1.8rem;
+    line-height: 3.4rem;
+    color: var(--white);
+    margin-bottom: 5rem;
+    max-width: 95.2rem;
+
+    @include responsive(phone) {
+      font-size: 1.6rem;
+      line-height: 3.2rem;
+    }
+
+    & span {
+      color: var(--sky);
+    }
+  }
+
+  &__fallback {
+    display: flex;
+    gap: 3.2rem;
+
+    & .form {
+      width: 100%;
+      max-width: 46rem;
+      display: flex;
+      flex-direction: column;
+      gap: 3.5rem;
+      align-self: flex-end;
+
+      & .checkbox {
+        margin-top: -2rem;
+      }
+    }
+
+    & img {
+      flex: 1;
+
+      @include responsive(laptopMore) {
+        display: none;
+      }
+    }
+  }
+}

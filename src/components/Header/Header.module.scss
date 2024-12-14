@@ -1,0 +1,45 @@
+@import '../../styles/mixins.scss';
+
+.header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 5;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 2rem;
+
+    @include responsive(tablet) {
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    @include responsive(phone) {
+      padding-top: 0rem;
+    }
+  }
+
+  &__logo {
+    width: 29.6rem;
+    height: 7.4rem;
+  }
+
+  &__socials {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  &__social {
+    & a > img {
+      @include responsive(phone) {
+        width: 2.5rem;
+        height: 2.5rem;
+      }
+    }
+  }
+}
